@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './recipe-detail.component';
+import { ShoppingListEdit } from './shopping-list-edit.component';
+import { AppComponent } from 'src/app/app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ShoppingListEdit
   ],
   imports: [
     BrowserModule,
