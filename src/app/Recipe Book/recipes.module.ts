@@ -7,7 +7,6 @@ import { RecipeDetail } from './Recipe Detail/recipe-detail.component';
 
 @NgModule({
   declarations: [
-    Recipes
   ],
   imports: [
     BrowserModule,

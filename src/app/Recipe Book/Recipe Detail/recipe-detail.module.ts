@@ -5,7 +5,6 @@ import { AppComponent } from 'src/app/app.component';
 
 @NgModule({
   declarations: [
-    RecipeDetail
   ],
   imports: [
     BrowserModule,
