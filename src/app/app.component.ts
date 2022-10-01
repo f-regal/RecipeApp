@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'RecipeApp';
-  navigationOption : string;
+  navigationOption : string = 'Recipes';
 
   setNavigationOption(navigationData: {navigateTo: string}) {
     this.navigationOption = navigationData.navigateTo;

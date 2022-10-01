@@ -16,5 +16,6 @@ export class RecipeItem {
     this.recipeSelected.emit({
       recipe: this.recipe
     })
+    console.log(this.recipe)
   }
 }

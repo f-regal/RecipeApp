@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Recipe } from './recipe.model';
 
 @Component({
@@ -9,6 +9,7 @@ import { Recipe } from './recipe.model';
 export class Recipes {
   title = 'RecipeApp';
   recipe: Recipe;
+  
 
   onRecipeSelectedInList(recipeData: {recipe: Recipe}) {
     this.recipe = recipeData.recipe

@@ -9,7 +9,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeList {
   title = 'RecipeList';
   recipes: Recipe[] = [ 
-    new Recipe('A Test Recipe', 'This is simply a Test', '../../app/Images/Recipe-logo.jpeg') 
+    new Recipe('A Test Recipe', 'This is simply a Test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg') 
   ]
   @Output() recipeSelectedInlist = new EventEmitter<{recipe: Recipe}>();
 
