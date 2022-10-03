@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
     selector:'app-shopping-edit',
@@ -7,5 +7,13 @@ import { Component } from "@angular/core";
     
 })
 export class ShoppingListEdit {
+    @Output() itemAdded = new EventEmitter<{item: string, itemAmount: string }>();
+
+    onAddShoppingItem(shoppingItem: HTMLInputElement, shoppingItemAmount: HTMLInputElement) {        
+        this.itemAdded.emit({
+            item: shoppingItem.value, 
+            itemAmount: shoppingItemAmount.value
+        })
+    }
 
 }

@@ -18,4 +18,9 @@ export class ShoppingList {
     ngOnInit() {
 
     }
+
+    onItemAdded(itemData: {item: string, itemAmount: string}) {
+        this.ingredients.push(new Ingredient(itemData.item, itemData.itemAmount));
+    }
 }
+
