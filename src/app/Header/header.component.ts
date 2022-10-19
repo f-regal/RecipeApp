@@ -8,6 +8,7 @@ import { Component, EventEmitter, Output } from "@angular/core";
 })
 export class HeaderComponent {
 @Output() navigationChosen = new EventEmitter<{navigateTo: string}>();
+dropdownClicked = false;
 
 
 onClickRecipes() {
@@ -20,5 +21,10 @@ onClickShoppingList() {
     this.navigationChosen.emit({
         navigateTo: "ShoppingList"
     })
+}
+
+onDropdownClicked() {
+    this.dropdownClicked = true;
+    console.log('HELOOOOOOOOOOO')
 }
 }

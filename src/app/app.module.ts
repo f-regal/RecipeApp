@@ -18,7 +18,7 @@ import { ShoppingList } from './Shopping List/shopping-list.component';
     Recipes,
     RecipeList,
     RecipeDetail,
-    RecipeItem
+    RecipeItem,
   ],
   imports: [
     BrowserModule,
