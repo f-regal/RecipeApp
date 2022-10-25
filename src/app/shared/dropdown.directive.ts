@@ -1,4 +1,4 @@
-import { Directive, Input, TemplateRef, ViewContainerRef } from "@angular/core";
+import { Directive, HostBinding, HostListener } from "@angular/core";
 
 @Directive({
     selector:'[dropdown]'
@@ -6,15 +6,14 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from "@angular/core";
 
 export class DropdownDirective {
 
-@Input() set dropdown(condition: boolean) {
-    if (condition) {
-        this.vcRef.createEmbeddedView(this.templateRef)
-    } else {
-        this.vcRef.clear();
-    }
+@HostBinding('class.open') isOpen = false;
+
+
+@HostListener('click') toggleOpen() {
+    this.isOpen = !this.isOpen;
 }
 
-constructor(private templateRef: TemplateRef<any>, private vcRef: ViewContainerRef) { }
+constructor() { }
 
 ngOnInit(){}
 
